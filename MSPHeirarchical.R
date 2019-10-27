@@ -57,18 +57,6 @@ library(pBrackets)
 
 setwd("~/Dropbox/Academic Papers/Scotland MSPS/Scotland Representation Project") #Working directory
 
-reps0 <- read.csv("ScotlandSurveyStackedWithID.csv")
-head(reps0)
-
-news <- read.csv("MSP News Coverage 16.csv")
-head(news)
-
-reps <- merge(reps0, news, by = c("repstack"))
-reps$rescalesurgex <- scale(reps$surgexstack)
-
-write.csv(reps, "ScotlandSurveyStackedWithIDNM.csv")
-
-reps <- read.csv("ScotlandSurveyStackedWithIDNM.csv")
 
 reps <- read.csv("ScotlandSurveyStackedWithIDNM.csv")
 
